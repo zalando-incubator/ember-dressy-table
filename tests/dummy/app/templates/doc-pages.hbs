@@ -1,0 +1,28 @@
+<header class="nav-header">
+    <nav>
+        <div class="logo">
+            <h1>Ember-dynamic-table</h1>
+        </div>
+        <div class="links">
+            {{#link-to "doc-pages.docs" class="link"}}Docs{{/link-to}}
+            {{#link-to "doc-pages.cookbook" class="link"}}Cookbook{{/link-to}}
+            <a href="https://github.bus.zalan.do/ipopov/ember-dynamic-table" class="link" target="_blank">Github</a>
+        </div>
+    </nav>
+</header>
+<main class="content">
+    <nav class="navigation">
+        <section>Docs</section>
+        {{#link-to "doc-pages.docs" class="link"}}Docs{{/link-to}}
+        <section>Cookbook</section>
+        {{#link-to "doc-pages.cookbook" class="link"}}Cookbook{{/link-to}}
+    </nav>
+    <div class="doc-page">
+        {{outlet}}
+    </div>
+</main>
+
+<footer>
+    <div class="copyright">
+    </div>
+</footer>

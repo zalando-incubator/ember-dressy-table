@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+html {
+    font-size: 100%;
+    font-family: 'Arial', sans-serif
+}
+
+header.nav-header {
+    background-color: darkorange;
+}
+
+header.nav-header nav {
+    line-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-content: stretch;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}
+
+header.nav-header nav .logo {
+    /*width: 300px;*/
+}
+
+header.nav-header nav .logo h1 {
+    margin: 0 15px;
+}
+
+header.nav-header nav .links {
+    display: flex;
+    justify-content: space-around;
+}
+
+header.nav-header nav .link {
+    margin: 0 5px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #313131;
+}
+
+header.nav-header nav .link.active {
+    background-color: #313131;
+    color: #f2f2f2;
+}
+
+main.content {
+    display: flex;
+    flex-direction: row;
+    max-width: 1024px;
+    margin: auto;
+    padding: 0 8px;
+}
+
+main.content nav.navigation {
+    padding: 8px;
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 25%;
+    width: 200px;
+
+}
+
+main.content nav.navigation section {
+    margin: 8px;
+    font-size: large;
+}
+
+main.content nav.navigation .link {
+    margin: 8px 16px;
+    padding: 8px;
+    text-decoration: none;
+    color: #313131;
+}
+
+main.content nav.navigation .link.active {
+    color: darkorange;
+    border-left: 2px solid darkorange;
+}
+
+main.content div.doc-page {
+    flex: 1;
+    padding: 8px;
+}
+
+div.code {
+    background-color: #f2f2f2;
+    margin: 20px;
+    padding: 15px 20px;
+}
+
+code {
+    padding: 3px 2px;
+    margin: 0;
+    font-size: small;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+}
+
+article.code-example {
+    background-color: #f0f0f0;
+    border: 1px solid grey;
+}
+
+article.code-example .code-example-tabs {
+    display: flex;
+}
+
+article.code-example .code-example-tab {
+    padding: 5px;
+    margin: 0 5px;
+}
+
+article.code-example .code-example-tab.active{
+    border-bottom: 2px solid darkorange;
+}
+
+article.code-example .result {
+    background-color: white;
+    display: none;
+}
+article.code-example .result.active {
+    display: inherit;
+}

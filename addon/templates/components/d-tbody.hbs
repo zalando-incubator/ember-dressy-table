@@ -1,0 +1,16 @@
+{{#if hasBlock}}
+    {{yield (hash
+                    d-tr = (component "d-tr"
+                            component=settings.rowComponent
+                            d-tbody = this)
+                    d-table = d-table
+            )}}
+{{else}}
+    {{#each data as |row rInd|}}
+        {{d-tr
+                component=settings.rowComponent
+                d-tbody = this
+                row=row
+                rInd=rInd}}
+    {{/each}}
+{{/if}}

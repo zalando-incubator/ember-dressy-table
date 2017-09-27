@@ -1,0 +1,16 @@
+{{#if settings.footer}}
+    {{#if hasBlock}}
+        {{yield d-table}}
+    {{else}}
+        <tfoot>
+        <tr>
+            {{#each columns as |col cInd|}}
+                <td>{{col.key}}</td>
+            {{/each}}
+        </tr>
+        </tfoot>
+    {{/if}}
+{{/if}}
+
+
+

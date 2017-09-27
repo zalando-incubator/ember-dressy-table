@@ -1,0 +1,10 @@
+{{#d-table table=table class="some-table" as |dtab|}}
+    {{d-header d-table=dtab class="some-table-header" someAction=(action "headerAction")}}
+    {{#d-tbody d-table=dtab class="some-table-tbody" as |zBody|}}
+        {{#each dtab.data as |row rInd|}}
+            {{zBody.d-tr
+                    row=row
+                    rInd=rInd}}
+        {{/each}}
+    {{/d-tbody}}
+{{/d-table}}

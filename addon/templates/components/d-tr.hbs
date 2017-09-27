@@ -1,0 +1,47 @@
+{{#if hasBlock}}
+    {{#if component}}
+        {{#component component row=row rInd=rInd}}
+            {{yield this}}
+        {{/component}}
+    {{else}}
+        <tr>
+            {{yield this}}
+        </tr>
+    {{/if}}
+{{else}}
+    {{#if component}}
+        {{#component component row=row rInd=rInd d-table=d-table}}
+            {{#each columns as |col cInd|}}
+                {{#if col.component}}
+                    {{component col.component
+                                value=(get row col.key)
+                                d-table=d-table
+                                row=row
+                                col=col
+                                rInd=rInd
+                                cInd=cInd}}
+                {{else}}
+                    <td>{{get row col.key}}</td>
+                {{/if}}
+            {{/each}}
+        {{/component}}
+    {{else}}
+        <tr>
+            {{#each columns as |col cInd|}}
+                {{#if col.component}}
+                    {{component col.component
+                                value=(get row col.key)
+                                d-table=d-table
+                                row=row
+                                col=col
+                                rInd=rInd
+                                cInd=cInd}}
+                {{else}}
+                    <td>{{get row col.key}}</td>
+                {{/if}}
+            {{/each}}
+        </tr>
+    {{/if}}
+{{/if}}
+
+

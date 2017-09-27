@@ -1,0 +1,18 @@
+{{yield (hash
+                table = (hash
+                        settings=table.settings
+                        state= table.state
+                        columns = table.columns
+                        data = paginated
+                )
+                pagination = (hash
+                        currentPage=currentPage
+                        pageSize=pageSize
+                        total = dataLength
+                        lastPage=lastPage
+                        hasNext=hasNext
+                        changeNext=(action 'changeNext')
+                        changePrevious=(action 'changePrevious')
+                )
+        )
+}}

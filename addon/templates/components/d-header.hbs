@@ -1,0 +1,27 @@
+{{#if (not-eq settings.header false)}}
+    {{#if hasBlock}}
+        {{yield d-table}}
+    {{else}}
+        <thead>
+            <tr>
+                {{#each columns as |col cInd|}}
+                    {{#with (if col.header.value col.header.value col.key) as |value|}}
+                        {{#if col.header.component}}
+                            {{component col.header.component
+                                        value=value
+                                        state=state
+                                        header=this
+                                        col=col
+                                        cInd=cInd}}
+                        {{else}}
+                            <td>{{value}}</td>
+                        {{/if}}
+                    {{/with}}
+                {{/each}}
+            </tr>
+        </thead>
+    {{/if}}
+{{/if}}
+
+
+

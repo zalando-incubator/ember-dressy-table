@@ -1,0 +1,27 @@
+<h1>Overview</h1>
+This addon gives you a table component with the following features:
+<ul>
+    <li>valid HTML</li>
+    <li>filtering/sorting/pagination</li>
+    <li>dynamic/rearrangeable/toggable columns</li>
+    <li>custom rendering component for cells</li>
+    <li>possibility to send actions from the cell component to the upper components</li>
+    <li>easy i18n</li>
+</ul>
+
+<h1>Installation</h1>
+You need to run this command in order to install the addon:
+<div class="code">
+    <code>$ ember install ember-dynamic-table</code>
+</div>
+
+This will install the following components into your application: <code>d-table</code>, <code>d-pagination</code>,
+<code>d-header</code>, <code>d-tbody</code> and others.
+<h1>Basic usage</h1>
+{{#code-example hbs="basic-usage.hbs" js="basic-usage.js.js" as |partialName|}}
+    {{partial partialName}}
+{{/code-example}}
+<p>For more examples see the {{#link-to "doc-pages.cookbook"}}cookbook{{/link-to}}</p>
+<h1>Styling</h1>
+<p>This addon contains no CSS focusing only on producing correct HTML markup.
+    That's why it can be used as a base for extention to other addons.</p>
