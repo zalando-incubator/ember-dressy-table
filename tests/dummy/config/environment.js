@@ -32,7 +32,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'docs') {
-    ENV.rootURL = '/zalando-incubator/ember-dressy-table/';
+    ENV.rootURL = '/ember-dressy-table/';
     ENV.locationType = 'hash';
     // ENV['ember-cli-mirage'] = {
     //   enabled: true
@@ -58,6 +58,5 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV.locationType = 'hash';
   }
-
   return ENV;
 };
