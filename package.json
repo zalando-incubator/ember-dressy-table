@@ -6,12 +6,12 @@
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "iaroslav.popov@zalando.de",
+  "author": "chilicoder1@gmail.com",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/zalando-incubator/ember-dressy-table",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
