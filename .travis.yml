@@ -25,8 +25,6 @@ matrix:
 
 before_install:
   - npm config set spin false
-  - npm install -g phantomjs-prebuilt
-  - phantomjs --version
 
 install:
   - npm install
@@ -39,11 +37,4 @@ script:
 
 packages:
   - google-chrome-stable
-  - libnss3
-  - libnss3-tools
-  - libfontconfig1
-  - wget
-  - ca-certificates
-  - apt-transport-https
-  - inotify-tools
 
