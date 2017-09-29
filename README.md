@@ -1,4 +1,5 @@
 ## Ember-dressy-table
+[![Ember Observer Score](https://emberobserver.com/badges/ember-dressy-table.svg)](https://emberobserver.com/addons/ember-dressy-table)
 
 **Ember-dressy-table** is an [Ember.js](https://www.emberjs.com/) addon that includes a powerful component for creating frontends with complicated tables—i.e., involving filtering/sorting/pagination/etc. It aims to balance functionality and extensibility by providing these capabilities/features:
 
@@ -28,12 +29,18 @@ As noted by Robert Jackson in [this 2014 article](https://dockyard.com/blog/2014
 
 Ember-dressy-table leverages the [open/closed principle](https://en.wikipedia.org/wiki/Open/closed_principle), which reinforces that one should be able to extend the behavior of a given software entity without modifying its source code.
  
-### Getting Started
+### Installing
+
+To add this addon into you application use this command:
+`ember install ember-dressy-table`
+
+See [docs](https://zalando-incubator.github.io/ember-dressy-table/#/doc-pages/docs) for more details
+
+### Development
 
 Note: You must install [Ember CLI](https://ember-cli.com/user-guide/) to use this addon. 
 
 Then install this addon with just three commands:
-
 * `git clone git@github.com:zalando-incubator/ember-dressy-table.git` this repository
 * `cd ember-dressy-table`
 * `npm install`
@@ -72,7 +79,7 @@ We appreciate any/all contributions to this project. Before opening a pull reque
 - make sure that all tests (including linting) are green.
 
 ### Contact
-Please open a GitHub issue on this repo if you have any problems or feedback. We aim to respond to all requests within 48-72 hours of posting. You can also email `iaroslav.popov@zalando.de` directly.
+Please open a GitHub issue on this repo if you have any problems or feedback. We aim to respond to all requests within 48-72 hours of posting. You can also email `chilicoder1@gmail.com` directly.
 
 ### License
 
