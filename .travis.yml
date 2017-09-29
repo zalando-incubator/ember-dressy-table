@@ -37,13 +37,13 @@ script:
   #  to the addon's original dependency state, skipping "cleanup".
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO test --skip-cleanup
 
- packages:
-      - google-chrome-stable
-      - libnss3
-      - libnss3-tools
-      - libfontconfig1
-      - wget
-      - ca-certificates
-      - apt-transport-https
-      - inotify-tools
+packages:
+  - google-chrome-stable
+  - libnss3
+  - libnss3-tools
+  - libfontconfig1
+  - wget
+  - ca-certificates
+  - apt-transport-https
+  - inotify-tools
 
