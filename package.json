@@ -1,7 +1,7 @@
 {
-  "name": "ember-dynamic-table",
+  "name": "ember-dressy-table",
   "version": "0.0.1",
-  "description": "Table component for dynamic tables.",
+  "description": "Table component for dressy tables.",
   "keywords": [
     "ember-addon"
   ],
@@ -17,7 +17,7 @@
     "start": "ember server",
     "test": "ember try:each",
     "sonar": "COVERAGE=true ember test;npm run replace;sonar-scanner -Dsonar.password=$(ztoken)",
-    "replace": "node ./node_modules/replace-in-file/bin/cli.js '/SF:ember-dynamic-table/g' 'SF:addon' ./coverage/lcov.info --isRegex",
+    "replace": "node ./node_modules/replace-in-file/bin/cli.js '/SF:ember-dressy-table/g' 'SF:addon' ./coverage/lcov.info --isRegex",
     "docs": "ember build -o docs/ -e docs"
   },
   "dependencies": {

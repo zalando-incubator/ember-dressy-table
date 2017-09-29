@@ -32,7 +32,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'docs') {
-    ENV.rootURL = '/ipopov/ember-dynamic-table/';
+    ENV.rootURL = '/zalando-incubator/ember-dressy-table/';
     ENV.locationType = 'hash';
     // ENV['ember-cli-mirage'] = {
     //   enabled: true

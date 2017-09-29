@@ -1,6 +1,6 @@
-## Ember-dynamic-table
+## Ember-dressy-table
 
-**Ember-dynamic-table** is an [Ember.js](https://www.emberjs.com/) addon that includes a powerful component for creating frontends with complicated tables—i.e., involving filtering/sorting/pagination/etc. It aims to balance functionality and extensibility by providing these capabilities/features:
+**Ember-dressy-table** is an [Ember.js](https://www.emberjs.com/) addon that includes a powerful component for creating frontends with complicated tables—i.e., involving filtering/sorting/pagination/etc. It aims to balance functionality and extensibility by providing these capabilities/features:
 
 * a custom rendering component for table cells
 * dynamic/rearrangeable/toggable columns
@@ -8,13 +8,13 @@
 * valid HTML
 * easy i18n
 
-You can use this addon out of the box. For the most common use cases, Ember-dynamic-table requires only minimal development effort. However, it's open to extension for anyone seeking more sophisticated features.
+You can use this addon out of the box. For the most common use cases, Ember-dressy-table requires only minimal development effort. However, it's open to extension for anyone seeking more sophisticated features.
 
-### Why Ember-dynamic-table
+### Why Ember-dressy-table
 
 We created this addon after discovering that [DataTables](https://github.com/DataTables/DataTables), while popular and mature, made implementing the custom renderer and actions from the cell component rather difficult when working with sophsticated tables. We looked for a mature "native Ember.js" component and found that the most popular option, [ember-light-table](https://github.com/offirgolan/ember-light-table), did not provide valid markup. 
 
-[Ember-contextual-table](https://emberobserver.com/addons/ember-contextual-table), which is similar to Ember-dynamic-table (and which directly inspired it), nearly required a full rebuild before we could create dynamic columns. We wanted something for Ember.js that was like [Reactable](https://github.com/glittershark/reactable), which enables fast, flexible, and simple data tables in React.
+[Ember-contextual-table](https://emberobserver.com/addons/ember-contextual-table), which is similar to Ember-dressy-table (and which directly inspired it), nearly required a full rebuild before we could create dressy columns. We wanted something for Ember.js that was like [Reactable](https://github.com/glittershark/reactable), which enables fast, flexible, and simple data tables in React.
 
 #### User Testimonial: Zalando
 
@@ -24,9 +24,9 @@ This project is **early-stage** and seeks contributors; [please click here](#TOD
 
 ### Core Technical Concepts
 
-As noted by Robert Jackson in [this 2014 article](https://dockyard.com/blog/2014/06/24/introducing_ember_cli_addons), "distribution of reusable Ember.js libraries has been a pain point for quite a while. During application development we have frequently wished for a silver bullet for the sharing of concepts/code from one project to another." Ember-dynamic-table aims to address Jackson's point by offering a solution.
+As noted by Robert Jackson in [this 2014 article](https://dockyard.com/blog/2014/06/24/introducing_ember_cli_addons), "distribution of reusable Ember.js libraries has been a pain point for quite a while. During application development we have frequently wished for a silver bullet for the sharing of concepts/code from one project to another." Ember-dressy-table aims to address Jackson's point by offering a solution.
 
-Ember-dynamic-table leverages the [open/closed principle](https://en.wikipedia.org/wiki/Open/closed_principle), which reinforces that one should be able to extend the behavior of a given software entity without modifying its source code.
+Ember-dressy-table leverages the [open/closed principle](https://en.wikipedia.org/wiki/Open/closed_principle), which reinforces that one should be able to extend the behavior of a given software entity without modifying its source code.
  
 ### Getting Started
 
@@ -34,8 +34,8 @@ Note: You must install [Ember CLI](https://ember-cli.com/user-guide/) to use thi
 
 Then install this addon with just three commands:
 
-* `git clone git@github.bus.zalan.do:ipopov/ember-dynamic-table.git` this repository
-* `cd ember-dynamic-table`
+* `git clone git@github.com:zalando-incubator/ember-dressy-table.git` this repository
+* `cd ember-dressy-table`
 * `npm install`
 
 #### Running
@@ -76,7 +76,7 @@ Please open a GitHub issue on this repo if you have any problems or feedback. We
 
 ### License
 
-The [MIT License](https://github.bus.zalan.do/ipopov/ember-dynamic-table/blob/master/LICENSE.md)
+The [MIT License](https://github.com/zalando-incubator/ember-dressy-table/blob/master/LICENSE.md)
 
 Copyright 2017 Zalando SE
 

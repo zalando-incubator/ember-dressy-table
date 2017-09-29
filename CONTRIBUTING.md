@@ -1,4 +1,4 @@
-# Contributing to Ember-dynamic-table
+# Contributing to Ember-dressy-table
 
 **Thank you for your interest in our small addon. Your contributions are highly welcome.**
 

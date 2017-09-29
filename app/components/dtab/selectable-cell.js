@@ -1,1 +1,1 @@
-export { default } from 'ember-dynamic-table/components/dtab/selectable-cell';
+export { default } from 'ember-dressy-table/components/dtab/selectable-cell';

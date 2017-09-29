@@ -1,1 +1,1 @@
-export { default } from 'ember-dynamic-table/components/d-header';
+export { default } from 'ember-dressy-table/components/d-header';

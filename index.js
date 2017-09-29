@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-dynamic-table'
+  name: 'ember-dressy-table'
 };

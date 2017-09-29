@@ -1,1 +1,1 @@
-export { default } from 'ember-dynamic-table/components/d-filter';
+export { default } from 'ember-dressy-table/components/d-filter';
