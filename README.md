@@ -1,5 +1,6 @@
 ## Ember-dressy-table
 [![Ember Observer Score](https://emberobserver.com/badges/ember-dressy-table.svg)](https://emberobserver.com/addons/ember-dressy-table)
+[![Build Status](https://travis-ci.org/zalando-incubator/ember-dressy-table.svg?branch=master)](https://travis-ci.org/zalando-incubator/ember-dressy-table)
 
 **Ember-dressy-table** is an [Ember.js](https://www.emberjs.com/) addon that includes a powerful component for creating frontends with complicated tables—i.e., involving filtering/sorting/pagination/etc. It aims to balance functionality and extensibility by providing these capabilities/features:
 
