@@ -80,7 +80,7 @@ We appreciate any/all contributions to this project. Before opening a pull reque
 - make sure that all tests (including linting) are green.
 
 ### Contact
-Please open a GitHub issue on this repo if you have any problems or feedback. We aim to respond to all requests within 48-72 hours of posting. You can also email `chilicoder1@gmail.com` directly.
+Please open a GitHub issue on this repo if you have any problems or feedback. We aim to respond to all requests within 48-72 hours of posting. You can also email `chilicoder1@gmail.com` directly
 
 ### License
 
