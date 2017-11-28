@@ -1,40 +1,31 @@
----
 language: node_js
 node_js:
-  - "6"
-
+- '6'
 sudo: false
-
 cache:
   directories:
-    - $HOME/.npm
-
+  - "$HOME/.npm"
 env:
-  # we recommend testing LTS's and latest stable release (bonus points to beta/canary)
-#  - EMBER_TRY_SCENARIO=ember-lts-2.4
-#  - EMBER_TRY_SCENARIO=ember-lts-2.8
-  - EMBER_TRY_SCENARIO=ember-release
-#  - EMBER_TRY_SCENARIO=ember-beta
-  - EMBER_TRY_SCENARIO=ember-canary
-  - EMBER_TRY_SCENARIO=ember-default
-
+- EMBER_TRY_SCENARIO=ember-release
+- EMBER_TRY_SCENARIO=ember-canary
+- EMBER_TRY_SCENARIO=ember-default
 matrix:
   fast_finish: true
   allow_failures:
-    - env: EMBER_TRY_SCENARIO=ember-canary
-
+  - env: EMBER_TRY_SCENARIO=ember-canary
 before_install:
-  - npm config set spin false
-
+- npm config set spin false
 install:
-  - npm install
-
-
+- npm install
 script:
-  # Usually, it's ok to finish the test scenario without reverting
-  #  to the addon's original dependency state, skipping "cleanup".
-  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO test --skip-cleanup
-
+- node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO test --skip-cleanup
 packages:
-  - google-chrome-stable
-
+- google-chrome-stable
+deploy:
+  provider: npm
+  email: chilicoder1@gmail.com
+  api_key:
+    secure: jA2saf3eVr/qMUmewRrrywQd8SuTe91EGz6EORCqILf5vWSUtpc5WEid78yrXBCOdSnIRpk6bP4JCLqmCNSBUl42+hAaI8i7inD+Pg/A8+imdQTy4IVlgJHQXGbZOrHH3wA2dZgFAsQJHiA9iu/rKrsKBiFmAAAxoDtsNfQ+zrIMgBJ25pdhCecTocO3WrtGXkwbUw8PdCyk9+/emvUi9l0hG/as/XEbypXBisfavx2c6rCH04gAId/c4E6SdqOKaTrqdiTxZT4H2TOVFQibOf+Vt58NrkEqY75fy/fnPe2zp/3Drsggjf1OoPk3iNt7Nrdzk84MS7Kjar3BUA3Qk6SZUOQxihUAlCJr5tWpW97vtR7sqXoWQGcv3zc19Kg5bVXvB4loSxnGbpOgsR28GWtvVkQl79N+ymVqbAdbRIcjUgDA2z1h/HqO11pRNZIW6F8x3r39NBNqyLwomjhU/18bvzHwhkahTyi2zKmhcVuJn8f3U/SP0+OBCoing80EFkB28dmI78GbJYVQOEHWY9IyxEcci+wO4/pLR9d0EMd4s7dD4TdcW152QpnsmJSTv/tICwVFmpFQSdDdy7ietnqt/fzInqVsPlFzqULScBYfOwOrAYKRTrnsTdPDggIwVNe8tj3byas0v8q+1uucBRK4STCCHRRyozbVqwOHm4o=
+  on:
+    tags: true
+    repo: zalando-incubator/ember-dressy-table
