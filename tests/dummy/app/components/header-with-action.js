@@ -5,6 +5,6 @@ export default Ember.Component.extend({
   tagName: 'td',
   layout,
   click(){
-    this.sendAction('header.someAction');
+    this.sendAction('d-header.someAction');
   }
 });
