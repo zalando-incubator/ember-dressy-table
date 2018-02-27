@@ -1,6 +1,6 @@
 {
   "name": "ember-dressy-table",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Table component for dressy tables.",
   "keywords": [
     "ember-addon"
