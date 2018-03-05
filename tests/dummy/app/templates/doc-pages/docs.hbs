@@ -18,9 +18,13 @@ You need to run this command in order to install the addon:
 This will install the following components into your application: <code>d-table</code>, <code>d-pagination</code>,
 <code>d-header</code>, <code>d-tbody</code> and others.
 <h1>Basic usage</h1>
-{{#code-example hbs="basic-usage.hbs" js="basic-usage.js.js" as |partialName|}}
-    {{partial partialName}}
-{{/code-example}}
+You can choose one of two styles to describe your table
+<h2>Code style</h2>
+When you using this style you manage your table via javascript code of the controller (or component) that renders the table.
+{{snippets/basic-usage-code-style}}
+<h2>Template style</h2>
+Using this style you describe your table in the template.
+{{snippets/basic-usage-template-style}}
 <p>For more examples see the {{#link-to "doc-pages.cookbook"}}cookbook{{/link-to}}</p>
 <h1>Styling</h1>
 <p>This addon contains no CSS focusing only on producing correct HTML markup.

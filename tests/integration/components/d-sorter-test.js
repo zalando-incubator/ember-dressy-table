@@ -1,6 +1,6 @@
-import {moduleForComponent, test} from 'ember-qunit';
+import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import {sortableTable, nestedDataTable} from '../../datasets/tables';
+import { sortableTable, nestedDataTable } from '../../datasets/tables';
 
 moduleForComponent('d-sorter', 'Integration | Component | z sorter', {
   integration: true

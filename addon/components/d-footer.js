@@ -1,10 +1,11 @@
-import Ember from 'ember';
+import { alias } from '@ember/object/computed';
+import Component from '@ember/component';
 import layout from '../templates/components/d-footer';
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout,
   tagName: '',
-  settings: Ember.computed.alias('d-table.settings'),
-  columns: Ember.computed.alias('d-table.columns'),
-  state: Ember.computed.alias('d-table.state')
+  settings: alias('d-table.settings'),
+  columns: alias('d-table.columns'),
+  state: alias('d-table.state')
 });

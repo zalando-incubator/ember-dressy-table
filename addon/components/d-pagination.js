@@ -1,14 +1,14 @@
-import Ember from 'ember';
-
-const {computed} = Ember;
+import { alias } from '@ember/object/computed';
+import Component from '@ember/component';
+import { computed } from '@ember/object';
 import layout from '../templates/components/d-pagination';
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout,
   tagName: '',
-  currentPage: computed.alias('table.state.pagination.currentPage'),
-  pageSize: computed.alias('table.state.pagination.pageSize'),
-  data: computed.alias('table.data'),
+  currentPage: alias('table.state.pagination.currentPage'),
+  pageSize: alias('table.state.pagination.pageSize'),
+  data: alias('table.data'),
 
   hasNext: computed('paginated.[]', 'pageSize', function () {
     return this.get('pageSize') === this.get('paginated').length;

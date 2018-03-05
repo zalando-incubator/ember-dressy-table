@@ -1,8 +1,13 @@
-import Ember from 'ember';
-import {moduleForComponent, test} from 'ember-qunit';
+import { run } from '@ember/runloop';
+import EmberObject from '@ember/object';
+import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import wait from 'ember-test-helpers/wait';
-import {standardTable, customRender, nestedDataTable} from '../../datasets/tables';
+import {
+  standardTable,
+  customRender,
+  nestedDataTable
+} from '../../datasets/tables';
 
 moduleForComponent('d-table', 'Integration | Component | z table', {
   integration: true
@@ -50,7 +55,7 @@ test('it renders cells with custom component', function (assert) {
 
 
 test('it handles changing data', function (assert) {
-  let changedStandardData = standardTable.data.map(i=>new Ember.Object(i));
+  let changedStandardData = standardTable.data.map(i=>new EmberObject(i));
   changedStandardData[0].set('foo', "2");
   this.set('table', standardTable);
   this.render(hbs`{{d-table table=table}}`);
@@ -59,7 +64,7 @@ test('it handles changing data', function (assert) {
     data: changedStandardData
   }));
   assert.equal(this.$('table tbody td').map((i, item)=>item.innerHTML).toArray().join(','), '2,2,3,4,5,6,7,8,9');
-  Ember.run(function () {
+  run(function () {
     changedStandardData[0].set('foo', "3");
   })
   return wait().then(() => {
@@ -70,7 +75,7 @@ test('it handles changing data', function (assert) {
 
 
 test('it handles changing column order', function (assert) {
-  this.set('table', new Ember.Object(standardTable));
+  this.set('table', new EmberObject(standardTable));
   this.render(hbs`{{d-table table=table}}`);
   assert.equal(this.$('table tbody td').map((i, item)=>item.innerHTML).toArray().join(','), '1,2,3,4,5,6,7,8,9');
 
