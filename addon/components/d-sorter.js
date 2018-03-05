@@ -1,9 +1,10 @@
-import Ember from 'ember';
+import { alias, sort } from '@ember/object/computed';
+import Component from '@ember/component';
 import layout from '../templates/components/d-sorter';
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout,
   tagName: '',
-  dataSorting: Ember.computed.alias('table.state.sorting'),
-  sortedData: Ember.computed.sort('table.data', 'dataSorting'),
+  dataSorting: alias('table.state.sorting'),
+  sortedData: sort('table.data', 'dataSorting'),
 });

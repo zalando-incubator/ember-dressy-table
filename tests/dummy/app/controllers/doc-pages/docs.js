@@ -1,3 +1,4 @@
-import Controller from "dummy/templates/snippets/basic-usage.js";
+import Controller from '@ember/controller';
 
-export default Controller;
+export default Controller.extend({
+});

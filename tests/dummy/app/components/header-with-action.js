@@ -1,10 +1,10 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import layout from '../templates/components/header-with-action';
 
-export default Ember.Component.extend({
+export default Component.extend({
   tagName: 'td',
   layout,
   click(){
-    this.sendAction('d-header.someAction');
+    this.get('d-header.someAction')();
   }
 });

@@ -1,8 +1,8 @@
-import Ember from 'ember';
-import {moduleForComponent, test} from 'ember-qunit';
+import { run } from '@ember/runloop';
+import { moduleForComponent, test } from 'ember-qunit';
 import wait from 'ember-test-helpers/wait';
 import hbs from 'htmlbars-inline-precompile';
-import {standardTable, customHeaderRender} from '../../datasets/tables';
+import { standardTable, customHeaderRender } from '../../datasets/tables';
 
 moduleForComponent('d-header', 'Integration | Component | z header', {
   integration: true
@@ -64,7 +64,7 @@ test('it sends action from header component to header', function (assert) {
   });
 
   this.render(hbs`{{d-header d-table=table someAction=(action headerAction)}}`);
-  Ember.run(() => this.$('td:contains("baz")').click());
+  run(() => this.$('td:contains("baz")').click());
 
   return wait().then(() => {
     assert.equal(counter, 1);

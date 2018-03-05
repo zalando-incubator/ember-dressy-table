@@ -1,0 +1,12 @@
+{{#d-table table=table as |dtab|}}
+    {{d-header d-table=dtab}}
+    {{#d-tbody d-table=dtab as |zbody|}}
+        {{#each dtab.data as |row|}}
+            <tr>
+                <td>{{row.foo}}</td>
+                <td>{{row.bar}}</td>
+                <td>{{row.baz}}</td>
+            </tr>
+        {{/each}}
+    {{/d-tbody}}
+{{/d-table}}

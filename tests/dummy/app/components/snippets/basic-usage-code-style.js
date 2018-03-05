@@ -1,10 +1,16 @@
-import Ember from 'ember';
+// BEGIN-SNIPPET basic-usage-code-style
+import {A} from '@ember/array';
+import {later} from '@ember/runloop';
+import Component from '@ember/component';
+import layout from '../../templates/components/snippets/basic-usage-code-style';
+import {computed} from '@ember/object';
 
-export default Ember.Controller.extend({
+export default Component.extend({
+  layout,
   init() {
     this._super(...arguments);
     let changeData = () => {
-      let length = Math.floor(Math.random() * 5) + 3;
+      let length = 5;
       let data = this.get('table.data');
       data.clear()
       while (length--) {
@@ -18,16 +24,17 @@ export default Ember.Controller.extend({
         let columns = this.get('table.columns');
         columns.pushObject(columns.shiftObject());
       }
-      Ember.run.later(changeData, 500)
+      later(changeData, 500)
     }
-    Ember.run.later(changeData, 2000);
+    later(changeData, 2000);
   },
-  table: {
-    columns: Ember.A([{key: 'foo'}, {key: 'bar'}, {key: 'baz'}]),
-    data: Ember.A([
+  table: computed(() => ({
+    columns: A([{key: 'foo'}, {key: 'bar'}, {key: 'baz'}]),
+    data: A([
       {foo: '5', bar: '2', baz: '3'},
       {foo: '4', bar: '5', baz: '6'},
       {foo: '7', bar: '8', baz: '9'},
     ])
-  }
+  }))
 });
+// END-SNIPPET

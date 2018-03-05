@@ -1,11 +1,12 @@
-import Ember from 'ember';
+import { alias } from '@ember/object/computed';
+import Component from '@ember/component';
 import layout from '../templates/components/d-tr';
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout,
   tagName: '',
-  'd-table': Ember.computed.alias('d-tbody.d-table'),
-  settings: Ember.computed.alias('d-tbody.settings'),
-  columns: Ember.computed.alias('d-tbody.columns')
+  'd-table': alias('d-tbody.d-table'),
+  settings: alias('d-tbody.settings'),
+  columns: alias('d-tbody.columns')
   // data: Ember.computed.alias('d-tbody.data'),
 });

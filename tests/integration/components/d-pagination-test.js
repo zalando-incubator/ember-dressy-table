@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import wait from 'ember-test-helpers/wait';
-import {paginationTable} from '../../datasets/tables';
+import { paginationTable } from '../../datasets/tables';
 
 moduleForComponent('d-pagination', 'Integration | Component | z pagination', {
   integration: true

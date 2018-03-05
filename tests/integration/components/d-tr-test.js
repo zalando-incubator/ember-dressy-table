@@ -1,6 +1,6 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import {standardTable} from '../../datasets/tables';
+import { standardTable } from '../../datasets/tables';
 
 moduleForComponent('d-tr', 'Integration | Component | z tr', {
   integration: true
@@ -40,5 +40,5 @@ test('it renders custom tr component', function (assert) {
   this.render(hbs`
         {{d-table table=table}}
   `);
-  assert.equal(this.$('table tbody').text().replace(/[^\w|\;|\:]/g, ''), '0;123:1;456:2;789:');
+  assert.equal(this.$('table tbody').text().replace(/[^\w|;|:]/g, ''), '0;123:1;456:2;789:');
 });
