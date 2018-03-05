@@ -15,6 +15,7 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
+    "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
     "test": "ember try:each",
     "sonar": "COVERAGE=true ember test;npm run replace;sonar-scanner -Dsonar.password=$(ztoken)",
     "replace": "node ./node_modules/replace-in-file/bin/cli.js '/SF:ember-dressy-table/g' 'SF:addon' ./coverage/lcov.info --isRegex",
@@ -49,6 +50,7 @@
     "ember-resolver": "^4.5.0",
     "ember-source": "~3.0.0",
     "ember-source-channel-url": "^1.0.1",
+    "ember-try": "^0.2.23",
     "eslint-plugin-ember": "^5.0.3",
     "eslint-plugin-node": "^6.0.1",
     "loader.js": "^4.6.0",
@@ -58,6 +60,9 @@
     "node": ">= 6"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "versionCompatibility": {
+      "ember": ">2.8.0"
+    }
   }
 }
